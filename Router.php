@@ -18,7 +18,7 @@ class Router {
 
         $rutas_protegidas = ['/admin', '/propiedades/crear', '/propiedades/actualizar', '/propiedades/eliminar', '/vendedores/crear', '/vendedores/actualizar', '/vendedores/eliminar'];
 
-        $url = $_SERVER['PATH_INFO'] ?? '/';
+        $url = $_SERVER['PATH_INFO'] ?? '/'; // REQUEST_URI? 
 
         if (in_array($url, $rutas_protegidas) && !$auth) header('Location: /');
 
