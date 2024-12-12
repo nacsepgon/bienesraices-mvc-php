@@ -63,12 +63,12 @@ class PaginasCtrl {
 
             // Configurar SMTP, Simple Mail Transfer Protocol
             $mail->isSMTP();
-            $mail->Host = 'sandbox.smtp.mailtrap.io';
+            $mail->Host = $_ENV['EMAIL_HOST'];
             $mail->SMTPAuth = true;
-            $mail->Username = 'ca216353d53b7c';
-            $mail->Password = '15878635708b23';
+            $mail->Username = $_ENV['EMAIL_USER'];
+            $mail->Password = $_ENV['EMAIL_PASS'];
             $mail->SMTPSecure = 'tls'; // PHPMailer::ENCRYPTION_SMTPS = 'ssl'
-            $mail->Port = 2525;
+            $mail->Port = $_ENV['EMAIL_PORT'];
 
             // Destinatarios
             $mail->setFrom('admin@bienesraices.com'); // Quién envía
