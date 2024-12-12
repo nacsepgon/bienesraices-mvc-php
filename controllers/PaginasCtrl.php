@@ -52,11 +52,10 @@ class PaginasCtrl {
 
     public static function contacto(Router $router) {
 
-        $patata = 'patata';
+        $msj = null;
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-            $msj = null;
             $respuestas = $_POST['contacto'];
 
             // Instanciar PHPMailer
