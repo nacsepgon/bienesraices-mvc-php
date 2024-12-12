@@ -1,0 +1,21 @@
+{
+    "name": "sepu/htdocs",
+    "description": "Bienes Raíces POO",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Nico Charri"
+        }
+    ],
+    "require": {
+        "intervention/image": "^3.9",
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Model\\" : "./models",
+            "MVC\\" : "./",
+            "Controller\\" : "./controllers"
+        }
+    }
+}

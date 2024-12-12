@@ -1,0 +1,27 @@
+.footer {
+
+    padding: $separacion 0;
+
+    background-color: $grisOscuro;
+
+    margin-bottom: 0;
+
+    .contenedor-footer {
+        padding-top: $separacion;
+    }
+
+    .navegacion {
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+
+        @include tablet {
+            justify-content: center;
+        }
+    }
+
+    .copyright {
+        color: $blanco;
+        text-align: center;
+    }
+}

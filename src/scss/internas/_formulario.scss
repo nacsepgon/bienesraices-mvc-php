@@ -1,0 +1,62 @@
+.formulario {
+    p {
+        font-size: 1.6rem;
+        color: $grisOscuro;
+        margin: 2rem 0 0;
+    }
+
+    legend {
+        font-size: 2rem;
+        color: $grisOscuro;
+    }
+
+    label {
+        font-weight: $bold;
+        text-transform: uppercase;
+        display: block;
+    }
+    textarea {
+        height: 20rem;
+    }
+
+    input:not( [type="submit"], [type="radio"] ), // Aplica a todos menos a ()
+    textarea,
+    select {
+        padding: 1rem;
+        display: block;
+        width: 100%;
+        background-color: $blanco;
+        border: 1px solid $gris;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+        &::placeholder {
+            color: $gris;
+        }
+    }
+
+    .forma-contacto {
+        display: flex;
+        gap: 0.5rem;
+    }
+    
+    input {
+        &[type="radio"] {
+            margin-right: 2rem;
+            &:last-of-type {
+                margin: 0;
+            }
+        }
+
+        &[type="submit"],
+        &[type="time"],
+        &[type="date"] {
+            width: min(100%, 35rem);
+        }
+    }
+
+    .forma-enviar {
+        display: flex;
+        justify-content: center;
+        margin-bottom: $separacion;
+    }
+}
